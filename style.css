@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
 
 * {
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -14,7 +16,54 @@ body {
     background-image: url('assets/images/bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
+}
+
+.header {
+    background: #333 !important;
+    color: white !important;
+    display: flex;
+    font-size: 140px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 100;
+    position: fixed;
+    animation-name: fadeaway;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeaway {
+    0% {
+        opacity: 100;
+        background: #333;
+    }
+
+    100% {
+        opacity: 0;
+        background: none;
+    }
+}
+
+@keyframes myanimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150px);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translate(0, 0);
+    }
+}
+
+.main {
+    background-color: white;
+    color: #333;
 }
 
 #footer {
@@ -74,8 +123,12 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-  }
+}
 
-  footer {
+footer {
     width: 100%;
-  }
+}
+
+.logo-text {
+    font-family: 'Carter One', cursive;
+}
